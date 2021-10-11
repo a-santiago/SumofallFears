@@ -19,7 +19,7 @@
 
 <body class="d-flex flex-column h-100">
     <!-- Nav Section -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top border-bottom">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="/img/500x500 Logo.png" width="32" height="32">App Name</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -48,35 +48,62 @@
         </div>
     </nav>
     <!-- Main Section -->
-    <main id="content" class="flex-shrink-0">
-        <div class="container">
-            <div class="row row-cols-1">
-                <div class="col col-md-6">
-                    <h1>REWIND: A Coding Project</h1>
-                    <p>This project reverses a string using a decremented for loop.</p>
-                </div>
-                <div class="col col-md-6">
-                    <h5 class="border-bottom">Enter a string to reverse</h5>
-                    <form class="row gx-3 gy-2">
-                        <div class="col-12">
-                            <input type="text" id="userString" class="form-control" required
-                                placeholder="Enter 2 or more characters" />
-                        </div>
-                        <div class="col-12">
-                            <button type="button" id="btnSubmit" class="btn btn-danger">Reverse!</button>
-                        </div>
-                    </form>
-                    <hr />
-                    <p id="results"></p>
-                </div>
+<main class="container mt-5">
+    <div class="row mt-5 mb-3">
+        <div class="container hero">
+            <div>
+                <h1 class="display-3">Sum Of All Fears</h1>
+                <h3>The sum of all fears is simple. Pick a number(K), and four more numbers.
+                    I will tell you if any two of those numbers added together equal the first number.
+                    Try the numbers already there, or put in your own.</h3>
+                <hr class="mt-2">
+                <h3>Give it a go!</h3>
+
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md">
+            <div class="card bg-transparent border-light">
+                <div class="card-body">
+                    <label for="inputk">Enter Number for K</label>
+                    <input id="inputk" type="number" value="17">
+                </div>
+                <div class="card-footer border-light">
+                    <button id="btnClear" class="btn btn-outline-danger">Clear</button>
+                    <button class="btn btn-outline-primary " id="btnSubmit" role="button">Submit</button>
+                </div>
 
-
+            </div>
+        </div>
+        <div class="col-md">
+            <label for="input1">Enter Number</label>
+            <input id="input1" type="number" value="10">
+            <br>
+            <label for="input2">Enter Number</label>
+            <input id="input2" type="number" value="15">
+            <br>
+            <label for="input3">Enter Number</label>
+            <input id="input3" type="number" value="7">
+            <br>
+            <label for="input4">Enter Number</label>
+            <input id="input4" type="number" value="3">
         </div>
 
-    </main>
+        <div class="col-md">
+            <div class="card bg-transparent border-light">
+
+                <h3>Your Numbers.</h3>
+                <h2 id="results"></h2>
+                <br>
+                <h3>The Answer Is...</h3>
+                <h1 id="results2" class="text-uppercase"></h1>
+            </div>
+        </div>
+    </div>
+</main>
     <!-- Footer Section -->
-    <footer class="footer mt-auto py-3">
+    <footer class="footer mt-auto py-3 border-top">
         <div class="container-fluid">
             <div class="row row-cols-1 row-cols-lg-3 gy-2">
                 <div
@@ -97,19 +124,18 @@
             </div>
         </div>
     </footer>
-    <!-- Bootstrap JS -->
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
-
-    <script src="/js/site.js"></script>
-
-    <script>
-        document.getElementById("btnSubmit").addEventListener("click", displayMessage);
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
-
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="js/site.js"></script>
 
 </body>
 
